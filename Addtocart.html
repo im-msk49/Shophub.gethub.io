@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.cart-container {
+    max-width: 1300px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+input {
+    width: 50px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.total {
+    margin-top: 20px;
+    text-align: right;
+}
+
+td h4 {
+    display: inline-block;
+    position: absolute;
+    margin-top: 40px;
+}
+
+td img {
+    width: 90px;
+    height: 100px;
+    margin-right: 10px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.total h3 {
+    margin-right: 140px;
+}
+
+.checkout-btn {
+    padding: 12px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 110px;
+}
+
+/* Media query for screens with a maximum width of 600px */
+@media only screen and (max-width: 850px) {
+  .cart-container{
+    width: 100%;
+    border-radius: 0;
+    padding:10px;
+  }
+  td img{
+    width: 50px;
+    height: 50px;
+  }
+  td h4{
+display: none;
+  }
+}
+
+    </style>
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <div class="cart-container">
+        <h2>Shopping Cart</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="images/h.jpg"> <h4>Bing Head Phones</h4></td>
+                    <td>$279.99</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>$279.99</td>
+                </tr>
+                
+                <tr>
+                    <td><img src="images/shirrt.jpg"> <h4>Men's Fashion T- Shirt</h4></td>
+                    <td>$320.99</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>$320.99</td>
+                </tr>
+                <tr>
+                    <td><img src="images/ppp.jpg"> <h4>Mobile Phones</h4></td>
+                    <td>$320.99</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>$320.98</td>
+                </tr>
+                <tr>
+                    <td><img src="images/shoes.jpg"> <h4>Skecher Shoes</h4></td>
+                    <td>$299.99</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>$229.98</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/watch.jpg"> <h4>Women Watches</h4></td>
+                    <td>$99.99</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>$29.98</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/slep.jpg"> <h4>Sleeper</h4></td>
+                    <td>$79.99</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>$79.98</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/camera.jpg"> <h4>Skecher Shoes</h4></td>
+                    <td>$299.99</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>$229.98</td>
+                </tr>
+
+                <tr>
+                    <td><img src="images/jacket.jpg"> <h4>winter Jacket</h4></td>
+                    <td>$199.99</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>$129.98</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total">
+            <h3>Total: $00.00</h3>
+            <a href="check.html"><button class="checkout-btn">Proceed to Checkout</button></a>
+        </div>
+    </div>
+
+
+<script>
+     document.addEventListener('DOMContentLoaded', function() {
+            const quantityInputs = document.querySelectorAll('input[type="number"]');
+            const prices = document.querySelectorAll('td:nth-child(2)'); // Select all price elements
+            const totalElements = document.querySelectorAll('td:nth-child(4)'); // Select all total elements
+            const totalHeading = document.querySelector('.total h3');
+            const checkoutBtn = document.querySelector('.checkout-btn');
+
+            // Function to update the totals for all products
+            function updateTotals() {
+                let globalTotal = 0;
+                quantityInputs.forEach((input, index) => {
+                    const price = parseFloat(prices[index].textContent.replace('$', ''));
+                    const quantity = parseInt(input.value);
+                    const total = (price * quantity).toFixed(2);
+                    totalElements[index].textContent = `$${total}`;
+                    globalTotal += parseFloat(total);
+                });
+                totalHeading.textContent = `Total: $${globalTotal.toFixed(2)}`;
+            }
+
+            // Initial total calculation
+            updateTotals();
+
+            // Event listeners for quantity change on each input
+            quantityInputs.forEach(input => {
+                input.addEventListener('input', () => {
+                    updateTotals();
+                });
+            });
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <style>
+        #proudctdeteils .single-pro-image {
+            padding: 30px;
+            width: 26%;
+            margin-right: 50px;
+        }
+
+        .single-pro-image img {
+            border-radius: 5px;
+        }
+
+        .small-img-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .small-img-col {
+            flex-basis: 24%;
+            cursor: pointer;
+        }
+
+        #proudctdeteils {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        #proudctdeteils .single-pro-deteils {
+            width: 50%;
+            padding: 20px;
+        }
+
+        #proudctdeteils .single-pro-deteils h6 {
+            font-size: 15px;
+        }
+
+        #proudctdeteils .single-pro-deteils h4 {
+            padding: 40px 0 20px 0;
+            font-size: 25px;
+            margin-top: -40px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        #proudctdeteils .single-pro-deteils h2 {
+            font-size: 26px;
+            color: red;
+            margin-top: -30px;
+        }
+
+        #proudctdeteils .single-pro-deteils select {
+            display: block;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+        }
+
+        #proudctdeteils .single-pro-deteils input {
+            width: 40px;
+            height: 45px;
+            padding-left: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        #proudctdeteils .single-pro-deteils .normal {
+            background: #088178;
+            color: #fff;
+            padding: 12px 15px;
+            cursor: pointer;
+            border: 1px solid white;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        #proudctdeteils .single-pro-deteils input:focus {
+            outline: none;
+        }
+
+        #proudctdeteils .single-pro-deteils h3 {
+            margin-top: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #proudctdeteils .single-pro-deteils span {
+            line-height: 20px;
+        }
+
+        @media only screen and (max-width:540px) {
+
+            #proudctdeteils .single-pro-image {
+                width: 100%;
+                padding: 10px;
+            }
+
+
+            .single-pro-image img {
+                width: 100%;
+                height: 50%;
+                border-radius: 5px;
+            }
+
+
+            .small-img-col {
+                flex-basis: 45%;
+                margin-bottom: 10px;
+            }
+
+            .small-img-col img {
+                width: 95%;
+                height: 110px;
+            }
+
+            #proudctdeteils {
+                flex-direction: column;
+            }
+
+            #proudctdeteils .single-pro-deteils {
+                width: 100%;
+                /* Full width on mobile */
+                padding: 15px;
+                /* Reduce padding slightly */
+            }
+
+        }
+
+        /* Proucdct feature deteils     */
+
+        .proudct {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-left: 30px;
+            margin-top: 40px;
+        }
+
+        .proudct .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .col3 {
+            width: 18%;
+            height: 350px;
+            border: 1px solid rgb(253, 246, 246);
+            text-align: center;
+            transition: all ease 0.5s;
+        }
+
+        .col3:hover {
+            margin-top: -5px;
+        }
+
+        .col3 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .col3 img {
+            width: 100%;
+            height: 250px;
+        }
+
+        .col3 span {
+            color: red;
+            font-weight: 600;
+            line-height: 25px;
+        }
+
+        .col3 h4 {
+            margin-top: 10px;
+        }
+
+        #rating {
+            margin-top: 5px;
+        }
+
+        @media only screen and (min-width:1280px) {
+            .proudct {
+                width: 100%;
+            }
+
+            .col3 {
+                width: 17%;
+            }
+        }
+
+        @media only screen and (max-width:1270px) {
+            .proudct {
+                width: 100%;
+            }
+
+            .col3 {
+                width: 22%;
+            }
+        }
+
+        @media only screen and (max-width:800px) {
+            .proudct {
+                width: 100%;
+            }
+
+            .col3 {
+                width: 28%;
+            }
+        }
+
+
+        @media only screen and (max-width:600px) {
+            .proudct {
+                width: 100%;
+            }
+
+            .col3 {
+                width: 42%;
+            }
+        }
+
+        @media only screen and (max-width:400px) {
+            .proudct {
+                width: 100%;
+                padding: 0 0;
+            }
+
+            .col3 {
+                width: 80%;
+            }
+
+        }
+
+
+
+
+
+        /* .   footor*/
+
+        .footer {
+            width: 100%;
+            position: relative;
+            height: auto;
+            background-color: #000;
+        }
+
+        .footer .col {
+            width: 190px;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            padding: 0px 20px 20px 20px;
+        }
+
+        .footer .col h2 {
+            color: orange;
+            margin-top: 50%;
+            font-size: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .footer .col h1 {
+            margin: 0;
+            padding: 0;
+            font-family: inherit;
+            font-size: 12px;
+            line-height: 17px;
+            padding: 20px 0px 5px 0px;
+            color: rgba(255, 255, 255, 0.2);
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.250em;
+        }
+
+        .footer .col ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer .col ul li {
+            color: #999999;
+            font-size: 14px;
+            font-family: inherit;
+            font-weight: bold;
+            padding: 5px 0px 5px 0px;
+            cursor: pointer;
+            transition: .2s;
+            -webkit-transition: .2s;
+            -moz-transition: .2s;
+        }
+
+        .social ul li {
+            display: inline-block;
+            padding-right: 5px !important;
+        }
+
+        .social ul li i {
+            font-size: 30px;
+            margin: 0 10px;
+        }
+
+        .footer .col ul li:hover {
+            color: #ffffff;
+            transition: .1s;
+            -webkit-transition: .1s;
+            -moz-transition: .1s;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        @media only screen and (min-width: 1280px) {
+            .contain {
+                width: 1200px;
+                margin: 0 auto;
+            }
+        }
+
+        @media only screen and (max-width: 1139px) {
+            .contain .social {
+                width: 1000px;
+                display: block;
+            }
+
+            .social h1 {
+                margin: 0px;
+            }
+        }
+
+        @media only screen and (max-width: 950px) {
+            .footer .col {
+                width: 33%;
+            }
+
+            .footer .col h1 {
+                font-size: 14px;
+            }
+
+            .footer .col ul li {
+                font-size: 13px;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .footer .col {
+                width: 50%;
+            }
+
+            .footer .col h1 {
+                font-size: 14px;
+            }
+
+            .footer .col ul li {
+                font-size: 13px;
+            }
+
+            .social ul li i {
+                font-size: 20px;
+                margin: 0 10px;
+            }
+        }
+
+        @media only screen and (max-width: 280px) {
+            .footer .col {
+                width: 100%;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="proudctdeteils" class="section-p1">
+        <div class="single-pro-image">
+            <img src="images/ph.jpg" width="100%" id="main-img" alt="">
+
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="images/ph.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="images/pppppppppp.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="images/phh.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="images/phone.jpg" width="100%" class="small-img" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="single-pro-deteils">
+            <h6>Home / T-Shirt</h6>
+            <h4>Men's Fashion T-Shirt</h4>
+            <h2>$320.99</h2>
+
+            <select>
+                <option>Select size</option>
+                <option>XL</option>
+                <option>XXL</option>
+                <option>Small</option>
+                <option>Large</option>
+                <option>Medium</option>
+            </select>
+            <input type="number" value="1">
+            <a href="AddtoCart.html"><button class="normal" id="btn1">Add To Cart</button></a>
+            <h3>Proudct Deteils</h3>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tenetur voluptatum earum harum reprehenderit natus unde,
+                exercitationem quam quis rem inventore.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tenetur voluptatum earum harum reprehenderit natus unde,
+                exercitationem quam quis rem inventore.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tenetur voluptatum earum harum reprehenderit natus unde,
+                exercitationem quam quis rem inventore.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tenetur voluptatum earum harum reprehenderit natus unde,
+                exercitationem quam quis rem inventore.
+            </span>
+        </div>
+    </section>
+
+
+
+
+    <div class="proudct">
+        <h2>Featured Proudcts</h2>
+        <div class="row">
+            <a href="">
+                <div class="col3">
+                    <img src="images/ch.jpg" alt="">
+                    <div id="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>Mobile Charger</h4>
+                    <span>$10.99</span>
+            </a>
+        </div>
+
+        <a href="">
+            <div class="col3">
+                <img src="images/ghwa.jpg" alt="">
+                <div id="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <h4>Oppo Ears Phones</h4>
+                <span>$35.99</span>
+        </a>
+    </div>
+
+
+
+    <a href="">
+        <div class="col3">
+            <img src="images/cha.jpg" alt="">
+            <div id="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Charger Cable</h4>
+            <span>$5.99</span>
+    </a>
+    </div>
+
+
+    <a href="">
+        <div class="col3">
+            <img src="images/spea.jpg" alt="">
+            <div id="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Mini Speaker</h4>
+            <span>$15.99</span>
+    </a>
+    </div>
+
+    <a href="">
+        <div class="col3">
+            <img src="images/canon.jpg" alt="">
+            <div id="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Canon DSLR</h4>
+            <span>$470.99</span>
+    </a>
+    </div>
+
+
+    </div>
+    </div>
+
+    <!-- Footor -->
+
+    <div class="footer">
+        <div class="contain">
+            <div class="col">
+                <h2>Shop Hub</h2>
+            </div>
+            <div class="col">
+                <h1>Company</h1>
+                <ul>
+                    <li>About us</li>
+                    <li>Feedback</li>
+                    <li>Shop</li>
+                    <li>Our Company</li>
+                    <li>Advertise with us</li>
+                    <li>Coupon And Discount</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Products</h1>
+                <ul>
+                    <li>Mobile Phones</li>
+                    <li>Shoes</li>
+                    <li>Watches</li>
+                    <li>Clothes</li>
+                    <li>Fragnance</li>
+                    <li>Electronic</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Help</h1>
+                <ul>
+                    <li>Privacy Policy</li>
+                    <li>Term & Condition</li>
+                    <li>Term of Use</li>
+                    <li>Help Center</li>
+                    <li>Coustmer Service</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Support</h1>
+                <ul>
+                    <li>Contact us</li>
+                    <li>Follow us</li>
+                    <li>Site Map</li>
+                    <li>Email template</li>
+                </ul>
+            </div>
+            <div class="col social">
+                <h1>Social</h1>
+                <ul>
+                    <li><i class="fa-brands fa-facebook"></i>
+                    <li><i class="fa-brands fa-instagram"></i>
+                    <li><i class="fa-brands fa-linkedin"></i>
+                    <li><i class="fa-brands fa-twitter"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+
+        var MainImg = document.getElementById("main-img");
+
+        var smallimg = document.getElementsByClassName("small-img");
+
+
+        smallimg[0].onclick = function () {
+            MainImg.src = smallimg[0].src;
+        }
+
+        smallimg[1].onclick = function () {
+            MainImg.src = smallimg[1].src;
+        }
+
+        smallimg[2].onclick = function () {
+            MainImg.src = smallimg[2].src;
+        }
+
+        smallimg[3].onclick = function () {
+            MainImg.src = smallimg[3].src;
+        }
+
+
+    </script>
+</body>
+
+</html>

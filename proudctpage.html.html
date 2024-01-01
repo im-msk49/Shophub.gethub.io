@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+}
+
+
+
+/* Feature proudct's */
+
+
+
+.proudct {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+.proudct .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.col3 {
+    width: 18%;
+    height: 350px;
+    border: 1px solid rgb(253, 246, 246);
+    text-align: center;
+    transition: all ease 0.5s;
+}
+
+.col3:hover {
+    margin-top: -5px;
+}
+
+.col3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.col3 img {
+    width: 100%;
+    height: 250px;
+}
+
+.col3 span {
+    color: red;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.col3 h4 {
+    margin-top: 10px;
+}
+
+#rating {
+    margin-top: 5px;
+}
+
+@media only screen and (min-width:1280px) {
+    .proudct {
+        width: 100%;
+    }
+
+    .col3 {
+        width: 17%;
+    }
+}
+
+@media only screen and (max-width:1270px) {
+    .proudct {
+        width: 100%;
+    }
+
+    .col3 {
+        width: 22%;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .proudct {
+        width: 100%;
+    }
+
+    .col3 {
+        width: 28%;
+    }
+}
+
+
+@media only screen and (max-width:600px) {
+    .proudct {
+        width: 100%;
+    }
+
+    .col3 {
+        width: 42%;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .proudct {
+        width: 100%;
+        padding: 0 0;
+    }
+
+    .col3 {
+        width: 80%;
+    }
+
+}
+
+
+footer{
+  background-color: orange;
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+  </style>
+  <title>Proudct's</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="" class="active">Proudcts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+      <!-- FEATURED proudct -->
+
+      <div class="proudct">
+        <h2>Featured Proudcts</h2>
+        <div class="row">
+            <a href="headphone page.html">
+                <div class="col3" id="headphone">
+                    <img src="images/h.jpg" alt="">
+                    <div id="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>Head Phone</h4>
+                    <span>$279.99</span>
+            </a>
+        </div>
+        <a href="iphone.html">
+            <div class="col3">
+                <img src="images/mbi.jpg" alt="">
+
+                <div id="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <h4>IPhone 8</h4>
+                <span>$320.99</span>
+        </a>
+    </div>
+    <a href="shoespage.html">
+        <div class="col3">
+            <img src="images/shoes.jpg" alt="">
+            <div id="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Men's Shoes</h4>
+            <span>$229.99</span>
+    </a>
+    </div>
+    <a href="shirt page.html">
+        <div class="col3">
+            <img src="images/aa.jpg" alt="">
+            <div id="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Men's T-Shirts</h4>
+            <span>$320.99</span>
+    </a>
+    </div>
+    <a href="women glass.html">
+        <div class="col3">
+            <img src="images/glass.jpg" alt="">
+            <div id="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Women Glasses</h4>
+            <span>$139.99</span>
+    </a>
+    </div>
+    <a href="women watches.html">
+        <div class="col3">
+            <img src="images/waat.jpg" alt="">
+            <div id="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Women Watches</h4>
+            <span>$149.99</span>
+    </a>
+    </div>
+    <a href="mobilecharger.html">
+        <div class="col3">
+            <img src="images/ch.jpg" alt="">
+            <div id="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Mobile Charger</h4>
+            <span>$49.99</span>
+    </a>
+    </div>
+    <a href="laptoppage.html">
+        <div class="col3">
+            <img src="images/lap.jpg" alt="">
+            <div id="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Lenovo Lap Top</h4>
+            <span>$320.99</span>
+    </a>
+    </div>
+    <a href="earphone.html">
+        <div class="col3">
+            <img src="images/ghwa.jpg" alt="">
+            <div id="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Oppo Ears Phones</h4>
+            <span>$35.99</span>
+    </a>
+    </div>
+    <a href="shoespage.html">
+        <div class="col3">
+            <img src="images/slep.jpg" alt="">
+            <div id="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Men's Sleeper's</h4>
+            <span>$10.99</span>
+    </a>
+    </div>
+
+    <a href="mobilecharger.html">
+        <div class="col3">
+            <img src="images/cha.jpg" alt="">
+            <div id="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Charger Cable</h4>
+            <span>$5.99</span>
+    </a>
+    </div>
+
+    <a href="iphone.html">
+        <div class="col3">
+            <img src="images/spea.jpg" alt="">
+            <div id="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Mini Speaker</h4>
+            <span>$15.99</span>
+    </a>
+    </div>
+
+    <a href="shirt page.html">
+        <div class="col3">
+            <img src="images/hhhh.jpg" alt="">
+            <div id="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Men's Clothes</h4>
+            <span>$100.99</span>
+    </a>
+    </div>
+
+    <a href="women glass.html">
+        <div class="col3">
+            <img src="images/frag.jpg" alt="">
+            <div id="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Men's Fragnance</h4>
+            <span>$140.99</span>
+    </a>
+    </div>
+
+    <a href="mobilecharger.html">
+        <div class="col3">
+            <img src="images/canon.jpg" alt="">
+            <div id="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Canon DSLR</h4>
+            <span>$470.99</span>
+    </a>
+    </div>
+
+    <a href="mobilecharger.html">
+      <div class="col3">
+          <img src="images/mini.jpg" alt="">
+          <div id="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+          </div>
+          <h4>Mini I Phone</h4>
+          <span>$420.99</span>
+  </a>
+  </div>
+
+  <a href="mobilecharger.html">
+    <div class="col3">
+        <img src="images/tarr.jpg" alt="">
+        <div id="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+            <i class="fa-regular fa-star"></i>
+        </div>
+        <h4>Charger Cable</h4>
+        <span>$10.99</span>
+</a>
+</div>
+
+<a href="mobilecharger.html">
+  <div class="col3">
+      <img src="images/socks.jpg" alt="">
+      <div id="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star-half-stroke"></i>
+          <i class="fa-regular fa-star"></i>
+      </div>
+      <h4>Socks</h4>
+      <span>$20.99</span>
+</a>
+</div>
+
+<a href="mobilecharger.html">
+  <div class="col3">
+      <img src="images/jacket.jpg" alt="">
+      <div id="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star-half-stroke"></i>
+          <i class="fa-regular fa-star"></i>
+      </div>
+      <h4>Stark Jacket</h4>
+      <span>$120.99</span>
+</a>
+</div>
+
+<a href="mobilecharger.html">
+  <div class="col3">
+      <img src="images/earrrrrr.jpg" alt="">
+      <div id="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star-half-stroke"></i>
+          <i class="fa-regular fa-star"></i>
+      </div>
+      <h4>OPPO Ear Phone</h4>
+      <span>$40.99</span>
+</a>
+</div>
+
+<a href="mobilecharger.html">
+  <div class="col3">
+      <img src="images/phh.jpg" alt="">
+      <div id="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star-half-stroke"></i>
+          <i class="fa-regular fa-star"></i>
+      </div>
+      <h4>OPPO Smart Phone</h4>
+      <span>$170.99</span>
+</a>
+</div>
+
+<a href="mobilecharger.html">
+  <div class="col3">
+      <img src="images/rea.jpg" alt="">
+      <div id="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star-half-stroke"></i>
+          <i class="fa-regular fa-star"></i>
+      </div>
+      <h4>Realme Earbirds</h4>
+      <span>$49.99</span>
+</a>
+</div>
+
+<a href="mobilecharger.html">
+  <div class="col3">
+      <img src="images/boot.jpg" alt="">
+      <div id="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star-half-stroke"></i>
+          <i class="fa-regular fa-star"></i>
+      </div>
+      <h4>Summer Shoes</h4>
+      <span>$60.99</span>
+</a>
+</div>
+
+<a href="mobilecharger.html">
+  <div class="col3">
+      <img src="images/cc.jpg" alt="">
+      <div id="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star-half-stroke"></i>
+          <i class="fa-regular fa-star"></i>
+      </div>
+      <h4>Ck Watch</h4>
+      <span>$110.99</span>
+</a>
+</div>
+
+<a href="mobilecharger.html">
+  <div class="col3">
+      <img src="images/kap.jpg" alt="">
+      <div id="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star-half-stroke"></i>
+          <i class="fa-regular fa-star"></i>
+      </div>
+      <h4>Stylish Summer Suit</h4>
+      <span>$140.99</span>
+</a>
+</div>
+    </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2023 E-Commerce Store. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

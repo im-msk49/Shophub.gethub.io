@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <style>
+    /* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #e0dfdf;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+}
+
+main.about {
+  padding: 20px;
+}
+
+.about-section, .team-section {
+  padding: 40px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-bg, .team-bg {
+  position: relative;
+}
+
+.about-bg::before, .team-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: -1;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.team-member {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team-member-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.team-member-info img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+
+
+
+/* .   footor*/
+
+.footer {
+    width: 100%;
+    position: relative;
+    height: auto;
+    background-color: #000;
+}
+
+.footer .col {
+    width: 190px;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0px 20px 20px 20px;
+}
+
+.footer .col h2 {
+    color: orange;
+    margin-top: 50%;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.footer .col h1 {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 20px 0px 5px 0px;
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.250em;
+}
+
+.footer .col ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .col ul li {
+    color: #999999;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 5px 0px 5px 0px;
+    cursor: pointer;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+}
+
+.social ul li {
+    display: inline-block;
+    padding-right: 5px !important;
+}
+
+.social ul li i {
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+.footer .col ul li:hover {
+    color: #ffffff;
+    transition: .1s;
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+}
+
+.clearfix {
+    clear: both;
+}
+
+@media only screen and (min-width: 1280px) {
+    .contain {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1139px) {
+    .contain .social {
+        width: 1000px;
+        display: block;
+    }
+
+    .social h1 {
+        margin: 0px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .footer .col {
+        width: 33%;
+    }
+
+    .footer .col h1 {
+        font-size: 14px;
+    }
+
+    .footer .col ul li {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .footer .col {
+        width: 50%;
+    }
+
+    .footer .col h1 {
+        font-size: 14px;
+    }
+
+    .footer .col ul li {
+        font-size: 13px;
+    }
+
+    .social ul li i {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .footer .col {
+        width: 100%;
+    }
+}
+  </style>
+  <title>About Us - E-Commerce</title>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="" class="active">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="about">
+    <section class="about-section">
+      <div class="about-bg">
+        <h1>About Our E-Commerce Store</h1>
+        <p>Welcome to our online store! We strive to provide our customers with top-quality products, exceptional service, and a seamless shopping experience.</p>
+        <p>Our diverse range of products includes electronics, fashion, accessories, home goods, and more. We're committed to continuously updating our inventory to offer the latest trends and best deals.</p>
+      </div>
+    </section>
+
+    <section class="team-section">
+      <div class="team-bg">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+          <div class="team-member-info">
+            <img src="images/sud.jpg" alt="Team Member 1">
+            <h3>Sudais Khan</h3>
+            <p>Co-Founder / CEO</p>
+          </div>
+          <div class="team-member-info">
+            <img src="images/sud.jpg" alt="Team Member 2">
+            <h3>Sudais Khan</h3>
+            <p>Head of Customer Service</p>
+          </div>
+          <!-- Add more team members as needed -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+      <!-- Footor -->
+
+      <div class="footer">
+        <div class="contain">
+            <div class="col">
+                <h2>Shop Hub</h2>
+            </div>
+            <div class="col">
+                <h1>Company</h1>
+                <ul>
+                    <li>About us</li>
+                    <li>Feedback</li>
+                    <li>Shop</li>
+                    <li>Our Company</li>
+                    <li>Advertise with us</li>
+                    <li>Coupon And Discount</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Products</h1>
+                <ul>
+                    <li>Mobile Phones</li>
+                    <li>Shoes</li>
+                    <li>Watches</li>
+                    <li>Clothes</li>
+                    <li>Fragnance</li>
+                    <li>Electronic</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Help</h1>
+                <ul>
+                    <li>Privacy Policy</li>
+                    <li>Term & Condition</li>
+                    <li>Term of Use</li>
+                    <li>Help Center</li>
+                    <li>Coustmer Service</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Support</h1>
+                <ul>
+                    <li>Contact us</li>
+                    <li>Follow us</li>
+                    <li>Site Map</li>
+                    <li>Email template</li>
+                </ul>
+            </div>
+            <div class="col social">
+                <h1>Social</h1>
+                <ul>
+                    <li><i class="fa-brands fa-facebook"></i>
+                    <li><i class="fa-brands fa-instagram"></i>
+                    <li><i class="fa-brands fa-linkedin"></i>
+                    <li><i class="fa-brands fa-twitter"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+
+</body>
+</html>

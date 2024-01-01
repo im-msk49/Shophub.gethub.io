@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.checkout-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.confirm-btn {
+    padding: 12px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    </style>
+    <title>Checkout</title>
+</head>
+<body>
+    <div class="checkout-container">
+        <h2>Checkout</h2>
+        <form action="process_order.php" method="post">
+            <!-- Add form fields for shipping address, payment details, etc. -->
+            <label for="shipping-address">Shipping Address:</label>
+            <textarea id="shipping-address" name="shipping-address" rows="4" required></textarea>
+
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="Easy Paisa">Easy Paisa</option>
+                <option value="jazz Cash">Jazz Cash</option>
+                <!-- Add more payment options as needed -->
+            </select>
+
+            <!-- Add more form fields as needed -->
+
+            <button type="submit" class="confirm-btn">Confirm Order</button>
+        </form>
+    </div>
+
+    <script>
+function showAlert() {
+  alert('Your order has been confirmed!');
+}
+
+
+const confirmButton = document.querySelector('.confirm-btn');
+confirmButton.addEventListener('click', showAlert);
+
+    </script>
+</body>
+</html>
